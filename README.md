@@ -1,2 +1,2 @@
 # aio
-Competitive programming samples for the Australian Informatics Olympiad (AIO).
+Competitive programming samples from the Australian Informatics Olympiad (AIO).
