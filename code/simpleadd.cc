@@ -26,4 +26,4 @@ int main() {
   FILE* output_file = fopen("addout.txt", "w");	
   fprintf(output_file, "%d", sum);
   fclose(output_file);
-}
+} 
