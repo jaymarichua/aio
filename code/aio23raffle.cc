@@ -45,9 +45,8 @@ int main(void) {
         fscanf(input_file, "%d", &numbers[i]);
     }
 
-    /* AIO problem task to use for loop within a for loop */
+    /* This AIO solution may result in TLE use for loop within a for loop which is O(n^2) */
     
-
     /* Build the distinct numbers array */
     int distinct_numbers[100005];
     int distinct_numbers_i = 0;
