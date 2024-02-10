@@ -45,20 +45,14 @@ int main(void) {
         fscanf(input_file, "%d", &numbers[i]);
     }
 
-    /* AIO problem task is to find the min of number array */
+    /* AIO problem task to use for loop within a for loop */
     
-    // Count occurences in the numbers array
-    int counting[100005];
-    for ()
-        for ()
-            if (numbers[j] == numbers[i])
-                counting[j] = count;
-            
-    // Find the minimum number of occurences
-    int min = -1;
-    for (int i = 0; i < N; i++) {
-        if (counting[i] < min) {
-            min = counting[i];
+    for (int j = 0; j < K; j++) {
+        bool marked_as_duplicate = false;
+        for (int i = 0; i < K; j++) {
+            if (numbers[i] == numbers[j]) {
+                answer++;
+            }
         }
     }
 
