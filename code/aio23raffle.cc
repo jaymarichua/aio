@@ -47,11 +47,37 @@ int main(void) {
 
     /* AIO problem task to use for loop within a for loop */
     
-    for (int j = 0; j < K; j++) {
-        bool marked_as_duplicate = false;
-        for (int i = 0; i < K; j++) {
-            if (numbers[i] == numbers[j]) {
-                answer++;
+
+    /* Build the distinct numbers array */
+    int distinct_numbers[100005];
+    int distinct_numbers_i = 0;
+
+    /* As each submitted number is between 1 and K inclusive. */
+    for (int i = 1; i <= K; i++) {
+        
+        /* Count the number of times a number from 1 to K appears */
+        int count = 0;
+        for (int j = 0; j < N; j++) {
+            if (numbers[j] == i) {
+                count++;
+            }
+        }
+
+        /* Append numbers[i] into the distinct array if distinct */
+        if (count == 1) {
+            distinct_numbers[distinct_numbers_i] = i;
+            distinct_numbers_i++;
+        }
+    }
+
+    /* Find the min in the distinct numbers array */
+    if (distinct_numbers_i == 0) {
+        answer = -1;
+    } else {
+        answer = distinct_numbers[0];
+        for (int i = 0; i < distinct_numbers_i; i++) {
+            if (distinct_numbers[i] < answer) {
+                answer = distinct_numbers[i];
             }
         }
     }
